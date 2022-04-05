@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import State from "./Component/State";
+import Map from "./Component/Map";
+import ComDidMount from "./Component/ComDidMount";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: { firstname: "jammy", lastname: "jai" },
+      company: "ZTM",
+    };
+  }
+  render() {
+    return (
+      <div>
+        {/*Explains about state and setState.*/}
+        <State />
+        <Map />
+        <ComDidMount />
+      </div>
+    );
+  }
 }
 
 export default App;
